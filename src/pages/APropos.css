@@ -1,0 +1,462 @@
+.apropos-page {
+  --green-900: #0d4635;
+  --green-700: #0d6d4b;
+  --green-600: #0e9c67;
+  --green-100: #dfeee7;
+  --green-50: #f5faf8;
+  --text: #1d2d2d;
+  --muted: #5f6f6f;
+  --line: rgba(13, 70, 53, 0.12);
+  --shadow: rgba(24, 52, 45, 0.08);
+
+  min-height: 100vh;
+  background: #f4f6f5;
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  padding: 18px 26px 42px;
+}
+
+.apropos-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 10px 18px;
+  box-shadow: 0 2px 10px rgba(15, 31, 28, 0.04);
+}
+
+.apropos-topbar__welcome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.apropos-topbar__icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+.apropos-topbar__search {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.apropos-topbar__search input {
+  width: 100%;
+  border: 1px solid rgba(17, 72, 59, 0.12);
+  border-radius: 999px;
+  background: rgba(248, 250, 249, 0.95);
+  padding: 12px 16px 12px 42px;
+  font-size: 0.95rem;
+  color: var(--text);
+  outline: none;
+}
+
+.apropos-topbar__search input::placeholder {
+  color: #7a8787;
+}
+
+.apropos-topbar__search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4f6767;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.apropos-topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 126px;
+  justify-content: flex-end;
+}
+
+.apropos-topbar__button,
+.apropos-topbar__avatar {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.apropos-topbar__button {
+  width: 32px;
+  height: 32px;
+}
+
+.apropos-topbar__notif {
+  position: absolute;
+  right: 2px;
+  top: 3px;
+  width: 9px;
+  height: 9px;
+  background: var(--green-700);
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.apropos-topbar__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #edf4f1;
+  box-shadow: inset 0 0 0 1px rgba(17, 72, 59, 0.08);
+}
+
+.apropos-content {
+  padding-top: 26px;
+}
+
+.apropos-hero {
+  display: grid;
+  grid-template-columns: 1.08fr 1.18fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.apropos-kicker {
+  margin: 0 0 18px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-600);
+}
+
+.apropos-title {
+  margin: 0;
+  font-size: clamp(2.1rem, 3vw, 3.2rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--green-900);
+}
+
+.apropos-hero__mission {
+  margin-top: 26px;
+  padding: 18px 20px 22px;
+  background: rgba(169, 212, 192, 0.28);
+  border: 1px solid rgba(19, 122, 91, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(35, 74, 59, 0.05);
+}
+
+.apropos-hero__mission-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.apropos-hero__mission-mark {
+  color: var(--green-700);
+  font-size: 1.2rem;
+}
+
+.apropos-hero__mission h2,
+.apropos-section-title,
+.apropos-engagements__header h2,
+.apropos-feature-card h3,
+.apropos-step-card h3,
+.apropos-engagement-card h3,
+.apropos-mission__block h3 {
+  margin: 0;
+  color: var(--green-900);
+}
+
+.apropos-hero__mission p,
+.apropos-mission__block p,
+.apropos-feature-card p,
+.apropos-step-card p,
+.apropos-engagement-card p,
+.apropos-section-subtitle,
+.apropos-engagements__header p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.apropos-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  border: none;
+  background: linear-gradient(135deg, #0f8d60, #0a6d4a);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 12px 20px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(12, 107, 80, 0.22);
+}
+
+.apropos-hero__visual {
+  position: relative;
+  height: 420px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #bdeaf8 0%, #ecf6fb 100%);
+  box-shadow: 0 16px 32px rgba(18, 42, 55, 0.12);
+}
+
+.apropos-hero__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.apropos-hero__globe {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0));
+}
+
+.apropos-mission {
+  margin-top: 26px;
+}
+
+.apropos-mission__block {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(181, 218, 203, 0.2);
+  border: 1px solid rgba(25, 113, 88, 0.08);
+  border-radius: 18px;
+  padding: 16px 20px 18px;
+}
+
+.apropos-mission__block h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.apropos-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.apropos-feature-card,
+.apropos-step-card,
+.apropos-engagement-card {
+  background: rgba(164, 210, 189, 0.24);
+  border: 1px solid rgba(14, 80, 62, 0.08);
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+  box-shadow: 0 8px 18px rgba(16, 49, 44, 0.03);
+}
+
+.apropos-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 130px;
+}
+
+.apropos-feature-card__icon-wrap,
+.apropos-step-card__icon-wrap,
+.apropos-engagement-card__icon-wrap {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f8d60, #0a7c50);
+  flex-shrink: 0;
+}
+
+.apropos-feature-card__icon,
+.apropos-step-card__icon,
+.apropos-engagement-card__icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.apropos-feature-card__body h3,
+.apropos-step-card__body h3,
+.apropos-engagement-card__body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.apropos-process {
+  margin-top: 38px;
+}
+
+.apropos-section-title {
+  font-size: clamp(1.8rem, 2.2vw, 2.5rem);
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.apropos-section-subtitle {
+  max-width: 620px;
+  font-size: 1rem;
+}
+
+.apropos-process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.apropos-step-card {
+  position: relative;
+  padding-top: 28px;
+}
+
+.apropos-step-card__number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f8d60, #0a6f49);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 8px 14px rgba(15, 141, 96, 0.24);
+}
+
+.apropos-step-card__icon-wrap {
+  margin: 16px auto 12px;
+  width: 56px;
+  height: 56px;
+}
+
+.apropos-step-card__body {
+  text-align: center;
+}
+
+.apropos-step-card__body h3 {
+  margin-bottom: 8px;
+}
+
+.apropos-engagements {
+  margin-top: 42px;
+  background: rgba(167, 212, 194, 0.18);
+  border: 1px solid rgba(16, 80, 62, 0.08);
+  border-radius: 18px;
+  padding: 18px 14px 20px;
+}
+
+.apropos-engagements__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.apropos-engagements__header h2 {
+  font-size: 1.7rem;
+  margin-bottom: 4px;
+}
+
+.apropos-engagements__icon-wrap {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d8f61, #0a714a);
+}
+
+.apropos-engagements__icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.apropos-engagements__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.apropos-engagement-card {
+  background: rgba(255, 255, 255, 0.28);
+  min-height: 176px;
+}
+
+.apropos-engagement-card__icon-wrap {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 980px) {
+  .apropos-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .apropos-feature-grid,
+  .apropos-process__grid,
+  .apropos-engagements__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .apropos-page {
+    padding: 14px 14px 24px;
+  }
+
+  .apropos-topbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .apropos-topbar__welcome,
+  .apropos-topbar__actions {
+    min-width: auto;
+  }
+
+  .apropos-topbar__search {
+    width: 100%;
+    max-width: none;
+    order: 3;
+  }
+
+  .apropos-feature-grid,
+  .apropos-process__grid,
+  .apropos-engagements__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apropos-hero__visual {
+    height: 300px;
+  }
+
+  .apropos-hero__mission {
+    padding: 16px 16px 20px;
+  }
+
+  .apropos-feature-card {
+    align-items: flex-start;
+  }
+}
