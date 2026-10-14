@@ -7,7 +7,7 @@
   --g50: #f0f8f3;
   --border: #d5dde0;
   --muted: #7b8a8f;
-  --bg: #f6f9fa;
+  --bg: var(--page-background, #fff);
 
   min-height: 100vh;
   width: 100%;

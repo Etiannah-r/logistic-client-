@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import googleIcon from "../icone/google.png";
+import logo from "../icone/logo.jpeg";
 
 export default function Connexion() {
   const navigate = useNavigate();
@@ -19,8 +20,11 @@ export default function Connexion() {
   return (
     <main className="auth-page">
       <Link className="auth-brand" to="/" aria-label="Retour à l’accueil">
-        <span className="brand-mark">P</span>
-        <span className="brand-name">PRIM LINK</span>
+        <img className="brand-mark" src={logo} alt="" />
+        <div className="brand-text">
+          <h1 className="titre">PRIME LINK</h1>
+          <h2 className="sous_titre">LOGISTICS</h2>
+        </div>
       </Link>
       <section className="auth-card">
         <h1>Connexion</h1>
@@ -44,7 +48,7 @@ export default function Connexion() {
           sessionStorage.setItem("primLinkAccountEmail", "");
           navigate("/espace-client");
         }}>
-          <img className="google-mark" src={googleIcon} alt="" />
+          <img className="google-mark" src={googleIcon} alt="Google" />
           Continuer avec Google
         </button>
         <p className="auth-switch">

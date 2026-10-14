@@ -10,7 +10,7 @@
   --shadow: rgba(24, 52, 45, 0.08);
 
   min-height: 100vh;
-  background: #f4f6f5;
+  background: var(--page-background, #fff);
   color: var(--text);
   font-family: "Inter", "Segoe UI", sans-serif;
   padding: 18px 26px 42px;

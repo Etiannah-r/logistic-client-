@@ -6,7 +6,7 @@
   min-height: 100%;
   padding: 18px;
   color: #18352b;
-  background: #f4f8f6;
+  background: var(--page-background, #fff);
   font-size: 13px;
 }
 

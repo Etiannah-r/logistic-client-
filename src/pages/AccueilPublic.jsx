@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Icon from "../components/Icon";
 import imageLogistique from "../icone/image.png";
+import logo from "../icone/logo.jpeg";
 
 const fonctionnalites = [
   { titre: "Gestion des clients", texte: "Centralisez vos contacts.", icon: "compte" },
@@ -13,9 +14,12 @@ export default function AccueilPublic() {
   return (
     <div className="public-home">
       <header className="public-header">
-        <Link className="brand" to="/" aria-label="PRIM LINK, accueil">
-          <span className="brand-mark">P</span>
-          <span className="brand-name">PRIM LINK</span>
+        <Link className="brand" to="/" aria-label="PRIME LINK LOGISTICS, accueil">
+          <img className="brand-mark" src={logo} alt="" />
+          <div className="brand-text">
+            <h1 className="titre">PRIME LINK</h1>
+            <h2 className="sous_titre">LOGISTICS</h2>
+          </div>
         </Link>
         <nav className="public-nav" aria-label="Navigation principale">
           <Link to="/connexion">Se connecter</Link>
@@ -43,7 +47,7 @@ export default function AccueilPublic() {
           </div>
         </section>
 
-        <section className="feature-strip" id="avantages" aria-label="Fonctionnalités de PRIM LINK">
+        <section className="feature-strip" id="avantages" aria-label="Fonctionnalités de PRIME LINK LOGISTICS">
           {fonctionnalites.map((fonctionnalite) => (
             <article className="feature-item" key={fonctionnalite.titre}>
               <Icon name={fonctionnalite.icon} size={21} />

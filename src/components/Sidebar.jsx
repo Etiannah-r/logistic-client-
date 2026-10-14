@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import menu from "../config/menu";
 import icons from "../config/icons";
 import Icon from "./Icon";
+import logo from "../icone/logo.jpeg";
 
 export default function Sidebar() {
   const navigate = useNavigate();
@@ -20,10 +21,10 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-header">
         <div className="logo">
-          {icons.logo ? <Icon name="logo" size={20} /> : "P"}
+          <img src={logo} alt="" />
         </div>
         <div>
-          <div className="project-name">PRIM LINK</div>
+          <div className="project-name">PRIME LINK LOGISTICS</div>
           <div className="project-sub">Espace client</div>
         </div>
       </div>

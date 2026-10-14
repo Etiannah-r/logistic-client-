@@ -72,6 +72,7 @@ export default function APropos() {
             <img src={headerIcons.avatar} alt="" className="apropos-topbar__icon" />
           </button>
         </div>
+
       </header>
 
       <main className="apropos-content">
