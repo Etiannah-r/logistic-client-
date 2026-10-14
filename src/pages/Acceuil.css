@@ -127,13 +127,7 @@
 }
 
 .account-modal__details {
-  display: grid;
   gap: 14px;
-}
-
-.account-modal__details > div {
-  display: grid;
-  gap: 6px;
 }
 
 .account-modal__details > div > span {

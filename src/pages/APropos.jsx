@@ -1,4 +1,5 @@
 import "./APropos.css";
+import { useAccountDialog } from "../components/AccountDialog";
 
 import userIcon from "../icone/compte.png";
 import notificationIcon from "../icone/notification.png";
@@ -44,6 +45,8 @@ const engagements = [
 const heroImage = transportIcon;
 
 export default function APropos() {
+  const openAccount = useAccountDialog();
+
   return (
     <div className="apropos-page">
       <header className="apropos-topbar">
@@ -65,7 +68,7 @@ export default function APropos() {
             <span className="apropos-topbar__notif" aria-hidden="true" />
           </button>
 
-          <button type="button" className="apropos-topbar__avatar" aria-label="Mon profil">
+          <button type="button" className="apropos-topbar__avatar" aria-label="Mon profil" onClick={openAccount}>
             <img src={headerIcons.avatar} alt="" className="apropos-topbar__icon" />
           </button>
         </div>

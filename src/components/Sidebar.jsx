@@ -11,6 +11,8 @@ export default function Sidebar() {
   const toggle = (title) => setClosed((c) => ({ ...c, [title]: !c[title] }));
 
   const logout = () => {
+    sessionStorage.removeItem("primLinkAccountName");
+    sessionStorage.removeItem("primLinkAccountEmail");
     navigate("/");
   };
 

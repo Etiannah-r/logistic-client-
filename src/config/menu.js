@@ -6,7 +6,7 @@ const menu = [
     items: [
       { label: "Accueil", path: "/espace-client" },
       { label: "À propos", path: "/espace-client/a-propos" },
-      { label: "Fonctionnalités", path: "/espace-client/fonctionnalites" },
+      { label: "Contact", path: "/espace-client/contact" },
     ],
   },
   {
@@ -25,7 +25,7 @@ const menu = [
   {
     title: "Compte",
     icon: "compte",
-    items: [{ label: "Mon profil", path: "/espace-client/profil" }],
+    items: [{ label: "Voir mon compte", path: "/espace-client/profil" }],
   },
 ];
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Commander.css";
+import { useAccountDialog } from "../components/AccountDialog";
 
 import userIcon from "../icone/compte.png";
 import packageIcon from "../icone/commande.png";
@@ -49,6 +50,7 @@ function OrderCard({ number, title, className = "", id, children }) {
 }
 
 export default function Commander() {
+  const openAccount = useAccountDialog();
   const [page, setPage] = useState(1);
   const [store, setStore] = useState(STORES[0]);
   const [productUrl, setProductUrl] = useState("https://detail.1688.com/offer/produit-exemple.html");
@@ -185,10 +187,10 @@ export default function Commander() {
           <h1>Commander un article</h1>
           <p>Choisissez un produit, estimez les frais et suivez votre commande jusqu’à Madagascar.</p>
         </div>
-        <div className="order-user">
+        <button type="button" className="order-user" onClick={openAccount} aria-label="Ouvrir mon compte">
           <img src={userIcon} alt="" />
           <span>Mon espace client</span>
-        </div>
+        </button>
       </header>
 
       {page === 1 && <div className="order-top-grid order-page-stack" id="commander-step-1">

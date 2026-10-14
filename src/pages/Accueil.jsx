@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAccountDialog } from "../components/AccountDialog";
 import "./Acceuil.css";
 
 import userIcon from "../icone/compte.png";
@@ -16,7 +16,7 @@ const services = [
     title: "Sécurité",
     description: "Vos marchandises sont prises en charge avec soin.",
     icon: securityIcon,
-    link: "/espace-client/fonctionnalites",
+    link: "/espace-client/contact",
   },
   {
     title: "Transport",
@@ -39,10 +39,9 @@ const steps = [
 ];
 
 export default function Accueil() {
-  const [accountOpen, setAccountOpen] = useState(false);
   const navigate = useNavigate();
+  const openAccount = useAccountDialog();
   const accountName = sessionStorage.getItem("primLinkAccountName") || "Mon compte";
-  const accountEmail = sessionStorage.getItem("primLinkAccountEmail") || "Adresse non renseignée";
 
   const logout = () => {
     sessionStorage.removeItem("primLinkAccountName");
@@ -62,46 +61,11 @@ export default function Accueil() {
             <img src={notificationIcon} alt="" />
             <span aria-hidden="true" />
           </button>
-          <button type="button" className="accueil-topbar__profile" aria-label="Ouvrir mon compte" onClick={() => setAccountOpen(true)}>
+          <button type="button" className="accueil-topbar__profile" aria-label="Ouvrir mon compte" onClick={openAccount}>
             <img src={userIcon} alt="" />
           </button>
         </div>
       </header>
-
-      {accountOpen && (
-        <div className="account-modal-backdrop" onClick={() => setAccountOpen(false)}>
-          <section
-            className="account-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="account-modal-title"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="account-modal__heading">
-              <span className="account-modal__avatar"><img src={userIcon} alt="" /></span>
-              <div>
-                <h2 id="account-modal-title">Compte</h2>
-                <span>Client</span>
-              </div>
-              <button type="button" aria-label="Fermer" onClick={() => setAccountOpen(false)}>×</button>
-            </div>
-            <div className="account-modal__details">
-              <div>
-                <span>Nom du compte</span>
-                <strong>{accountName}</strong>
-              </div>
-              <div>
-                <span>Email</span>
-                <strong>{accountEmail}</strong>
-              </div>
-            </div>
-            <div className="account-modal__actions">
-              <button type="button" className="account-modal__logout" onClick={logout}>Se déconnecter</button>
-              <button type="button" className="account-modal__confirm" onClick={() => setAccountOpen(false)}>OK</button>
-            </div>
-          </section>
-        </div>
-      )}
 
       <main className="accueil-content">
         <section className="accueil-hero">

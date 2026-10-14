@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Transport.css";
+import { useAccountDialog } from "../components/AccountDialog";
 
 import userIcon from "../icone/compte.png";
 import secUserIcon from "../icone/compte.png";
@@ -100,6 +101,7 @@ export default function DemandeTransport({
   onBack,
   onNext,
 }) {
+  const openAccount = useAccountDialog();
   const [form, setForm] = useState({
     nom: "", prenom: "", telephone: "", email: "", cin: "", adresse: "",
     article: "", quantite: "", poids: "",
@@ -130,7 +132,7 @@ export default function DemandeTransport({
           <span className="dt-topbar__menu-mark" aria-hidden="true">☰</span>
         </button>
 
-        <button type="button" className="dt-topbar__user">
+        <button type="button" className="dt-topbar__user" onClick={openAccount} aria-label="Ouvrir mon compte">
           <span className="dt-topbar__avatar">
             <img src={userIcon} alt="" />
           </span>

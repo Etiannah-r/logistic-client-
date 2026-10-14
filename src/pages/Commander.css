@@ -48,9 +48,13 @@
   border: 1px solid var(--order-border);
   border-radius: 999px;
   background: white;
+  color: inherit;
+  font-family: inherit;
   font-size: 12px;
   font-weight: 650;
+  cursor: pointer;
 }
+.order-user:focus-visible { outline: 3px solid #08784d; outline-offset: 3px; }
 
 .order-user img {
   width: 20px;
