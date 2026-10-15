@@ -26,6 +26,7 @@
   border-radius: 18px;
   padding: 10px 18px;
   box-shadow: 0 2px 10px rgba(15, 31, 28, 0.04);
+  margin-top: -20px;
 }
 
 .apropos-topbar__welcome {

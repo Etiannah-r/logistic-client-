@@ -52,7 +52,6 @@ export default function Inscription() {
         <p className="auth-switch">
           Vous avez déjà un compte ? <Link to="/connexion">Connectez-vous</Link>
         </p>
-        <Link className="back-home" to="/">Retour à l’accueil</Link>
       </section>
     </main>
   );

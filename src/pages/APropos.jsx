@@ -55,19 +55,7 @@ export default function APropos() {
           <span>Bienvenue, Nom</span>
         </div>
 
-        <div className="apropos-topbar__search" role="search">
-          <span className="apropos-topbar__search-icon" aria-hidden="true">
-            ⌕
-          </span>
-          <input type="text" placeholder="Rechercher..." aria-label="Rechercher" />
-        </div>
-
         <div className="apropos-topbar__actions">
-          <button type="button" className="apropos-topbar__button" aria-label="Notifications">
-            <img src={headerIcons.bell} alt="" className="apropos-topbar__icon" />
-            <span className="apropos-topbar__notif" aria-hidden="true" />
-          </button>
-
           <button type="button" className="apropos-topbar__avatar" aria-label="Mon profil" onClick={openAccount}>
             <img src={headerIcons.avatar} alt="" className="apropos-topbar__icon" />
           </button>

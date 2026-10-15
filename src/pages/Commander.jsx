@@ -4,7 +4,7 @@ import { useAccountDialog } from "../components/AccountDialog";
 
 import userIcon from "../icone/compte.png";
 import packageIcon from "../icone/commande.png";
-import globeIcon from "../icone/globe.png";
+import globeIcon from "../icone/maps.png";
 import shipIcon from "../icone/bateaux.png";
 import planeIcon from "../icone/avion.png";
 import pinIcon from "../icone/navigation-gps.png";

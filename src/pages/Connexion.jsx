@@ -54,7 +54,6 @@ export default function Connexion() {
         <p className="auth-switch">
           Vous n’avez pas de compte ? <Link to="/inscription">S’inscrire</Link>
         </p>
-        <Link className="back-home" to="/">Retour à l’accueil</Link>
       </section>
     </main>
   );
